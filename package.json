@@ -12,6 +12,11 @@
     "test:ping": "node ./test/ping/index.js"
   },
   "author": "BackRunner",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/backrunner/afdian-api.git"
+  },
+  "homepage": "https://github.com/backrunner/afdian-api",
   "license": "MIT",
   "devDependencies": {
     "@types/chai": "^4.2.22",
