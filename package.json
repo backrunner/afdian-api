@@ -7,10 +7,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
-    "build:types": "tsc --emitDeclarationOnly --outDir=\"./types\"",
-    "dist": "npm run build && npm run build:types",
-    "test": "mocha"
+    "build": "rimraf -rf ./dist && tsc",
+    "test": "mocha",
+    "test:ping": "node ./test/ping/index.js"
   },
   "author": "BackRunner",
   "license": "MIT",
@@ -18,6 +17,7 @@
     "@types/chai": "^4.2.22",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.10.3",
+    "@types/node-fetch": "^2.5.12",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "chai": "^4.3.4",
@@ -26,10 +26,11 @@
     "eslint-config-prettier": "^8.3.0",
     "mocha": "^9.1.2",
     "prettier": "^2.4.1",
+    "rimraf": "^3.0.2",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
   },
   "dependencies": {
-    "node-fetch": "^3.0.0"
+    "node-fetch": "^2.6.5"
   }
 }

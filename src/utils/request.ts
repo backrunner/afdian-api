@@ -1,11 +1,11 @@
 import { AfdianRequest, AfdianRequestParams, AfdianSignedRequest } from '../types/request';
 import * as crypto from 'crypto';
 
-const buildRequest = (userId: string, params: AfdianRequestParams | undefined): AfdianRequest => {
+const buildRequest = (userId: string, params?: AfdianRequestParams): AfdianRequest => {
   const req = {
     user_id: userId,
     ts: Math.floor(Date.now() / 1000),
-    params: JSON.stringify(params),
+    params: JSON.stringify(params || { empty: true }),
   };
   return req;
 };
