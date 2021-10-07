@@ -4,13 +4,13 @@ export interface AfdianRequestParams {
 
 export interface AfdianRequest {
   user_id: string;
-  params: string | undefined;
+  params?: string;
   ts: number;
 }
 
 export interface AfdianSignedRequest {
   user_id: string;
-  params: string | undefined;
+  params?: string;
   ts: number;
   sign: string;
 }
