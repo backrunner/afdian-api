@@ -19,7 +19,10 @@ npm install afdian-api -S
 以下是一个最小化的例子：
 
 ```js
+// esm
 import Afdian from 'afdian-api';
+// cjs
+const Afdian = require('afdian-api');
 
 const afdian = new Afdian({
   token: '',
