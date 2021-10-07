@@ -1,12 +1,13 @@
 import { AfdianRequest, AfdianRequestParams, AfdianSignedRequest } from '../types/request';
-import crypto from 'crypto';
+import * as crypto from 'crypto';
 
-const buildRequestBody = (userId: string, params: AfdianRequestParams): AfdianRequest => {
-  return {
+const buildRequest = (userId: string, params: AfdianRequestParams | undefined): AfdianRequest => {
+  const req = {
     user_id: userId,
-    params: JSON.stringify(params),
     ts: Math.floor(Date.now() / 1000),
+    params: JSON.stringify(params),
   };
+  return req;
 };
 
 const signRequest = (token: string, body: AfdianRequest): AfdianSignedRequest => {
@@ -18,4 +19,4 @@ const signRequest = (token: string, body: AfdianRequest): AfdianSignedRequest =>
   };
 };
 
-export { buildRequestBody, signRequest };
+export { buildRequest, signRequest };

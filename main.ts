@@ -1,7 +1,8 @@
 import fetch from 'node-fetch';
 import api from './src/constants/api';
+import { AfdianApiOpts } from './src/types/common';
 import { AfdianRequestParams } from './src/types/request';
-import { buildRequestBody, signRequest } from './src/utils/request';
+import { buildRequest, signRequest } from './src/utils/request';
 
 class AfdianApi {
   private userId: string;
@@ -12,19 +13,13 @@ class AfdianApi {
     this.token = token;
   }
   private async send(url: string, params?: AfdianRequestParams) {
-    let body = null;
-    if (params) {
-      const signed = signRequest(this.token, buildRequestBody(this.userId, params));
-      body = {
-        body: JSON.stringify(signed),
-      };
-    }
+    const signed = signRequest(this.token, buildRequest(this.userId, params));
     return await fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      ...body,
+      body: JSON.stringify(signed),
     });
   }
   async ping() {

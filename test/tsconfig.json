@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./compiled",
+    "strict": true,
+    "target": "es2016"
+  },
+  "include": ["./**/*.spec.ts"]
+}
