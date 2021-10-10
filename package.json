@@ -1,6 +1,6 @@
 {
   "name": "afdian-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "爱发电开发者API的简易包装",
   "main": "./dist/main.js",
   "files": [
@@ -8,8 +8,7 @@
   ],
   "scripts": {
     "build": "rimraf -rf ./dist && tsc",
-    "test": "mocha",
-    "test:ping": "node ./test/ping/index.js"
+    "test": "mocha"
   },
   "author": "BackRunner",
   "repository": {
