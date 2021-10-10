@@ -15,7 +15,7 @@ export interface AfdianSignedRequest {
   sign: string;
 }
 
-interface AfdianPlanInfo {
+export interface AfdianPlanInfo {
   plan_id: string;
   rank: number;
   user_id: string;
@@ -39,7 +39,7 @@ interface AfdianPlanInfo {
   rankType: number;
 }
 
-interface AfdianSponsorInfo {
+export interface AfdianSponsorInfo {
   sponsor_plans: AfdianPlanInfo[];
   current_plan: AfdianPlanInfo;
   all_sum_amount: string;
@@ -63,7 +63,7 @@ export interface AfdianSponsorResponse {
   };
 }
 
-interface AfdianOrderInfo {
+export interface AfdianOrderInfo {
   out_trade_no: string;
   user_id: string;
   plan_id: string;

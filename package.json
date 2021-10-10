@@ -1,6 +1,6 @@
 {
   "name": "afdian-api",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "爱发电开发者API的简易包装",
   "main": "./dist/main.js",
   "files": [
