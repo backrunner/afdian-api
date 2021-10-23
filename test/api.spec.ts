@@ -7,23 +7,15 @@ const afdian = new Afdian({
   token: keys.token,
 });
 
-describe('ping', () => {
+describe('API request test', () => {
   it('ping', async () => {
     const res = await afdian.ping();
-    // console.log('ping res', res);
     expect(res.ec).to.equal(200);
   });
-});
-
-describe('queryOrder', () => {
   it('queryOrder', async () => {
     const res = await afdian.queryOrder(1);
-    console.log('queryOrder res', res.data.list);
     expect(res.ec).to.equal(200);
   });
-});
-
-describe('querySponsor', () => {
   it('querySponsor', async () => {
     const res = await afdian.querySponsor(1);
     expect(res.ec).to.equal(200);
