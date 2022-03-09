@@ -1,10 +1,12 @@
-import Afdian from '../main';
-import keys from './keys';
 import { expect } from 'chai';
+import dotEnv from 'dotenv';
+import Afdian from '../main';
+
+dotEnv.config();
 
 const afdian = new Afdian({
-  userId: keys.userId,
-  token: keys.token,
+  userId: process.env.AFDIAN_USER_ID || '',
+  token: process.env.AFDIAN_TOKEN || '',
 });
 
 describe('API request test', () => {

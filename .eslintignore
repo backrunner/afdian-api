@@ -4,3 +4,4 @@ bin/
 **/*.min.js
 **/*-min.js
 **/*.bundle.js
+test

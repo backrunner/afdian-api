@@ -1,4 +1,5 @@
 .history
+.env
 node_modules
 dist
 test/keys.ts

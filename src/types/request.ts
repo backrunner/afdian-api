@@ -53,19 +53,27 @@ export interface AfdianSponsorInfo {
   };
 }
 
-export interface AfdianBasicResponse {
-  ec: number
-  em: string
-  data: any
+export interface AfdianBasicResponse<T> {
+  ec: number;
+  em: string;
+  data: T;
 }
 
-export interface AfdianSponsorResponse extends AfdianBasicResponse {
-  data: {
-    total_count: number;
-    total_page: number;
-    list: AfdianSponsorInfo[];
+export type AfdianPingResponse = AfdianBasicResponse<{
+  uid: string;
+  request: {
+    user_id: string;
+    params: string;
+    ts: number;
+    sign: string;
   };
-}
+}>;
+
+export type AfdianSponsorResponse = AfdianBasicResponse<{
+  total_count: number;
+  total_page: number;
+  list: AfdianSponsorInfo[];
+}>;
 
 export interface AfdianOrderInfo {
   out_trade_no: string;
@@ -85,10 +93,8 @@ export interface AfdianOrderInfo {
   addres_address: string;
 }
 
-export interface AfdianOrderResponse extends AfdianBasicResponse {
-  data: {
-    list: AfdianOrderInfo[];
-    total_count: number;
-    total_page: number;
-  };
-}
+export type AfdianOrderResponse = AfdianBasicResponse<{
+  list: AfdianOrderInfo[];
+  total_count: number;
+  total_page: number;
+}>;
