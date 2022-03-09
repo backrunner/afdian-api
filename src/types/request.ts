@@ -53,9 +53,13 @@ export interface AfdianSponsorInfo {
   };
 }
 
-export interface AfdianSponsorResponse {
-  ec: number;
-  em: string;
+export interface AfdianBasicResponse {
+  ec: number
+  em: string
+  data: any
+}
+
+export interface AfdianSponsorResponse extends AfdianBasicResponse {
   data: {
     total_count: number;
     total_page: number;
@@ -81,9 +85,7 @@ export interface AfdianOrderInfo {
   addres_address: string;
 }
 
-export interface AfdianOrderResponse {
-  ec: number;
-  em: string;
+export interface AfdianOrderResponse extends AfdianBasicResponse {
   data: {
     list: AfdianOrderInfo[];
     total_count: number;
