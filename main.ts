@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 import api from './src/constants/api';
 import { AfdianApiOpts } from './src/types/common';
-import { AfdianOrderResponse, AfdianRequestParams, AfdianSponsorResponse } from './src/types/request';
+import { AfdianBasicResponse, AfdianOrderResponse, AfdianRequestParams, AfdianSponsorResponse } from './src/types/request';
 import { buildRequest, signRequest } from './src/utils/request';
 
 class AfdianApi {
@@ -22,7 +22,7 @@ class AfdianApi {
       body: JSON.stringify(signed),
     });
   }
-  async ping() {
+  async ping(): Promise<AfdianBasicResponse> {
     const res = await this.send(api.ping);
     return await res.json();
   }
