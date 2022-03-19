@@ -1,7 +1,7 @@
 {
   "name": "afdian-api",
-  "version": "1.0.4",
-  "description": "爱发电开发者API的简易包装",
+  "version": "1.0.5",
+  "description": "爱发电开发者API的简易包装 / A simple wrapper of Afdian APIs",
   "main": "./dist/main.js",
   "types": "./dist/main.d.ts",
   "files": [
@@ -18,6 +18,12 @@
     "url": "https://github.com/backrunner/afdian-api.git"
   },
   "homepage": "https://github.com/backrunner/afdian-api",
+  "keywords": [
+    "afdian",
+    "api",
+    "tool",
+    "util"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@types/chai": "^4.3.0",
@@ -31,8 +37,8 @@
     "eslint": "^7.32.0",
     "eslint-config-alloy": "^4.5.1",
     "eslint-config-prettier": "^8.5.0",
-    "mocha": "^9.2.1",
-    "prettier": "^2.5.1",
+    "mocha": "^9.2.2",
+    "prettier": "^2.6.0",
     "rimraf": "^3.0.2",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.2"
