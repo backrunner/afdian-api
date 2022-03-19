@@ -4,6 +4,8 @@ import { AfdianApiOpts } from './src/types/common';
 import { AfdianBasicResponse, AfdianOrderResponse, AfdianRequestParams, AfdianSponsorResponse } from './src/types/request';
 import { buildRequest, signRequest } from './src/utils/request';
 
+export * from './src/types'
+
 class AfdianApi {
   private userId: string;
   private token: string;
