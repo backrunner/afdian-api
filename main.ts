@@ -9,8 +9,6 @@ import {
 } from './src/types/request';
 import { buildRequest, signRequest } from './src/utils/request';
 
-export * from './src/types'
-
 class AfdianApi {
   private userId: string;
   private token: string;
@@ -49,4 +47,5 @@ class AfdianApi {
   }
 }
 
+export * from './src/types';
 export default AfdianApi;
